@@ -12,7 +12,8 @@
         <h1>Tip calculator</h1>
         
         <h2><label for="bill-amount">Enter the Bill Amount: </label></h2>
-        <input type="number" id="bill-amount" min="0" required>
+        <input type="number" id="bill-amount" min="0">
+        <p id="bill-amount-error"></p>
         <h2>Select the tip</h2>
         
         <div id="button-grid">
@@ -20,6 +21,7 @@
             <button id="fifteen">15%</button>
             <button id="twenty">20%</button>
         </div>
+        <p id="tip-error"></p>
         
         
         <button type="submit" id="calculate">Calculate</button>
