@@ -1,0 +1,71 @@
+* {
+    box-sizing: border-box;
+}
+
+#main-container{
+    background-color: rgb(180, 213, 222);
+    border-radius: 15px;
+    display: grid; 
+    grid-template-areas: "heading heading" "bill-amount-heading bill-amount" "bill-amount-error bill-amount-error" "tip-heading button-grid" "custom-tip-heading custom-tip" "tip-error tip-error" "calculate calculate";
+    margin: 20px;
+    padding: 20px;
+    border: 2px solid black;
+    gap: 10px;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+
+#calculate{
+    background-color: lime;
+    grid-area: calculate;
+}
+
+#button-grid{
+    display: grid;
+    grid-template-areas: "ten fifteen twenty";
+    gap: 5px;
+    margin-bottom: 10px;
+    grid-area: button-grid;
+}
+
+.tip-button{
+    background-color: white;
+    border: 1px solid black;
+}
+
+#heading{
+    grid-area: heading;
+}
+
+#bill-amount-heading{
+    grid-area: bill-amount-heading;
+}
+
+#bill-amount{
+    grid-area: bill-amount;
+    height: 20px; 
+    
+}
+
+#tip-heading{
+    grid-area: tip-heading;
+}
+
+#custom-tip-heading{
+    grid-area: custom-tip-heading;
+    font-weight: bold; 
+}
+
+#custom-tip{
+    grid-area: custom-tip;
+}
+
+#bill-amount-error{
+    grid-area: bill-amount-error;
+    color:red;
+}
+
+#tip-error{
+    grid-area: tip-error;
+    color: red;
+}
