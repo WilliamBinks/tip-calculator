@@ -35,8 +35,8 @@ function calculate(percentageChoice){
         console.log(typeof percentageChoice);
         tipAmount = userInput * percentageChoice;
         total = Number(userInput) + Number(tipAmount);
-        tipAmountBox.textContent = "Tip Amount: $"+String(tipAmount);
-        outputBox.textContent = "Total Amount: $"+String(total);
+        tipAmountBox.textContent = "Tip Amount: $"+String(tipAmount.toFixed(2));
+        outputBox.textContent = "Total Amount: $"+String(total.toFixed(2));
         billAmountError.textContent= "";
         tipError.textContent = "";
     } else{
