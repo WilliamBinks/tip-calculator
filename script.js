@@ -10,15 +10,20 @@ let calculateButton = document.getElementById("calculate");
 let outputBox = document.getElementById("final-cost");
 let billAmountError = document.getElementById("bill-amount-error");
 let tipError = document.getElementById("tip-error");
+let tipAmountBox = document.getElementById("tip-amount");
+let customTipBox = document.getElementById("custom-tip");
 
 
 tenPercentButton.addEventListener("click",() => buttonPressed(10));
 fifteenPercentButton.addEventListener("click",() => buttonPressed(15));
 twentyPercentButton.addEventListener("click",() => buttonPressed(20));
+customTipBox.addEventListener("keyup", () => buttonPressed(customTipBox.value));
+
 
 calculateButton.addEventListener("click",() => calculate(tipSelected))
 
 function buttonPressed(button){
+    console.log(button);
     tipSelected = button;
     tipError.textContent = ""
 }
@@ -26,12 +31,14 @@ function buttonPressed(button){
 function calculate(percentageChoice){
     userInput = userInputBox.value;
     if (userInput && percentageChoice){
-        percentageChoice = percentageChoice/100;
+        percentageChoice = parseInt(percentageChoice)/100;
+        console.log(typeof percentageChoice);
         tipAmount = userInput * percentageChoice;
         total = Number(userInput) + Number(tipAmount);
-        outputBox.textContent = "$"+String(total);
-        billAmountError.textContent= ""
-        tipError.textContent = ""
+        tipAmountBox.textContent = "Tip Amount: $"+String(tipAmount);
+        outputBox.textContent = "Total Amount: $"+String(total);
+        billAmountError.textContent= "";
+        tipError.textContent = "";
     } else{
         console.log(percentageChoice);
         console.log(typeof userInput);
