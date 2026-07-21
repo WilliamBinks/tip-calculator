@@ -35,6 +35,8 @@
 
 #heading{
     grid-area: heading;
+    text-align: center; 
+    font-size: 3rem;
 }
 
 #bill-amount-heading{
@@ -63,9 +65,11 @@
 #bill-amount-error{
     grid-area: bill-amount-error;
     color:red;
+    font-weight: bold;
 }
 
 #tip-error{
     grid-area: tip-error;
     color: red;
+    font-weight: bold;
 }
