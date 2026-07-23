@@ -20,6 +20,8 @@ blank file with plain HTML, CSS, and JavaScript — no frameworks.
 - Deployed on GitHub Pages
 
 ## What I learned
-My first project built from a blank file with no tutorial — wiring up
+My first project built from a blank file with no tutorial - wiring up
 click and keyboard events, reading and coercing input values, and
-handling the invalid-input cases cleanly.
+handling the invalid-input cases cleanly. The main focus was on functionality
+rather than the aesthetic and creating a working project ASAP.
+
